@@ -1,0 +1,48 @@
+p {
+	font-size: 25px;
+	font-family: sans-serif;
+	padding-left:38%;
+	
+}
+#gg {
+	padding-top: 5%;
+}
+
+.blue {
+	color: rgb(6, 171, 187);
+}
+
+.rosso {
+	color: red;
+}
+
+
+.verde {
+	color: rgb(11, 186, 100);
+}
+
+.giallo {
+	color: yellow;
+}
+
+#myButton {
+	margin-bottom:10%;
+	margin-left: 73%;
+	background-color: rgb(6, 119, 177);
+	color: white;
+	width: 80px;
+	height: 40px;
+	border-radius:6px;
+}
+
+	#myButton:hover {
+		transition-property: transform,width,height;
+		transition-duration: .5s;
+		border-radius: 20px;
+		transition-delay: .02s;
+		transform: translateY(5px);
+		width: 50px;
+		height: 25px;
+		background-color: red;
+		opacity: 1;
+	}

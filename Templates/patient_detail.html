@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel=" style.css" href="StyleSheet1.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Diagnosis System</title>
+</head>
+<body onload="displayResults()">
+    <h1 id="nav">Diagnosis System Project</h1>
+    <center>
+        <form name="myForm" action="index.jsp" method="POST">
+
+            <table border="0" style="margin-top:8%;">
+
+                <tbody>
+                    <tr>
+                        <td id="tt"><b>First Name:</b></td>
+                        <td><input class="tb" type="text" name="first" value="" size="50" /></td>
+                    </tr>
+                    <tr>
+                        <td id="tt">Last Name:</td>
+                        <td><input class="tb" type="text" name="last" value="" size="50" /></td>
+                    </tr>
+
+                    <tr>
+                        <td id="tt">Gender:</td>
+                        <td>
+                            <select class="GG" name="Gen">
+                                <option value="0">Male</option>
+                                <option value="0">Female</option>
+
+                            </select>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td id="tt">Age:</td>
+                        <td><input class="ag" type="text" name="age" value="" size="50" /></td>
+                    </tr>
+                    <tr>
+                        <td id="tt">Blood Type:</td>
+                        <td>
+                            <select class="BT" name="BldT">
+                                <option value="0">A-</option>
+                                <option value="0">A+</option>
+                                <option value="0">B-</option>
+                                <option value="0">B+</option>
+                                <option value="0">O-</option>
+                                <option value="0">O+</option>
+                                <option value="0">AB-</option>
+                                <option value="0">AB+</option>
+                            </select>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td id="tt">Governorate:</td>
+                        <td>
+                            <select class="tb" name="Gov">
+                                <option value="222">Sharqia</option>
+                                <option value="223">Alexandria</option>
+                                <option value="224">Aswan</option>
+                                <option value="225">Asyut</option>
+                                <option value="226">Beheira</option>
+                                <option value="227">Beni Suef</option>
+                                <option value="228">Cairo</option>
+                                <option value="229">Dakahlia</option>
+                                <option value="230">Damietta</option>
+                                <option value="231">Faiyum</option>
+                                <option value="232">Gharbia</option>
+                                <option value="233">Giza</option>
+                                <option value="234">Ismailia</option>
+                                <option value="235">Kafr El Sheikh</option>
+                                <option value="236">Luxor</option>
+                                <option value="237">Matruh</option>
+                                <option value="238">Minya</option>
+                                <option value="239">Monufia</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="tt">city:</td>
+                        <td><input class="tb" type="text" name="city" value="" size="50" /></td>
+                    </tr>
+                    <tr>
+                        <td id="tt">address:</td>
+                        <td><input class="tb" type="text" name="address" value="" size="50" /></td>
+                    </tr>
+                    <tr>
+                        <td id="tt">email:</td>
+                        <td><input class="tb" type="text" name="email" value="" size="50" /></td>
+                    </tr>
+
+
+
+
+                </tbody>
+            </table>
+
+            <input class="tb" type="hidden" name="hidden" value="<%= result%>" size="50" />
+        </form>
+
+    </center>
+    <style>
+        body {
+            background-image: url('MBG.jpg');
+        }
+    </style>
+	
+<center>
+<button id="myButton" class="float-left submit-button" >Submit</button>
+<center/>
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "file:///E:/database_project/page2.html";
+    };
+</script>
+</body>
+</html>
