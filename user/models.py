@@ -41,11 +41,6 @@ class User(AbstractUser):
         verbose_name = _("user")
         verbose_name_plural = _("users")
 
-    # Removed from base class
-    first_name = None
-    last_name = None
-    username = None
-
     # required
     name = models.CharField(max_length=255, blank=True)
     mobile = models.IntegerField(unique=True)
@@ -67,3 +62,24 @@ class User(AbstractUser):
         self.full_clean()
         super().save(*args, **kwargs)
 
+
+class Patient(User):
+    class Meta:
+        verbose_name = _("patient")
+        verbose_name_plural = _("patients")
+    
+    country = models.CharField(max_length=255, blank=True)
+    age = models.IntegerField()
+    GENDER_CHOICES = (
+        ('M', 'Male'),
+        ('F', 'Female'),
+    )
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+
+
+class Doctor(User):
+    class Meta:
+        verbose_name = _("doctor")
+        verbose_name_plural = _("doctors")
+    
+    major = models.CharField(max_length=255)
