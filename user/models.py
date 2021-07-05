@@ -62,6 +62,14 @@ class User(AbstractUser):
         self.full_clean()
         super().save(*args, **kwargs)
 
+    def __str__(self) -> str:
+        return str(self.mobile)
+
+    def __repr__(self) -> str:
+        if self.name:
+            return f"<User {self.id}: {str(self)} - {self.name}>"
+        return f"<User {self.id}: {str(self)}>"
+
 
 class Patient(User):
     class Meta:

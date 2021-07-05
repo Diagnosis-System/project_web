@@ -13,3 +13,6 @@ class Symptom(models.Model):
     desease_name = models.ForeignKey(
         "desease.Desease", on_delete=models.SET_NULL, null=True, blank=True
     )
+
+    def __str__(self):
+        return self.symptom_name
