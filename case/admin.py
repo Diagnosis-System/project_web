@@ -3,6 +3,10 @@ from .models import Case, CaseSymptoms
 from desease.models import Desease
 import operator
 
+@admin.register(CaseSymptoms)
+class CaseSymptomAdmin(admin.ModelAdmin):
+    pass
+
 
 class InlineCaseSymptoms(admin.TabularInline):
     model = CaseSymptoms
@@ -59,6 +63,10 @@ class CaseAdmin(admin.ModelAdmin):
 
         return most_freq_desease
 
-    def save_model(self, request, obj, form, change):
+    # def save_model(self, request, obj, form, change):
+    #     obj.desease_name = self.get_desease(list(CaseSymptoms.objects.filter(case=obj)))
+    #     super().save_model(request, obj, form, change)
+
+    def response_add(self, request, obj, post_url_continue=None):
         obj.desease_name = self.get_desease(list(CaseSymptoms.objects.filter(case=obj)))
-        super().save_model(request, obj, form, change)
+        return super().response_add(request, obj, post_url_continue=post_url_continue)
