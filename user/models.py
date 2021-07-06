@@ -24,6 +24,7 @@ class UserManager(BaseUserManager):
         """
         Create and save a SuperUser with the given mobile and password.
         """
+        breakpoint()
         extra_fields.setdefault("is_staff", True)
         extra_fields.setdefault("is_superuser", True)
         extra_fields.setdefault("is_active", True)
@@ -47,8 +48,8 @@ class User(AbstractUser):
     mail = models.EmailField(max_length=254, blank=True)
 
     # Settings
-    USERNAME_FIELD = "mobile"
-    REQUIRED_FIELDS = []
+    # USERNAME_FIELD = "mobile"
+    REQUIRED_FIELDS = ['mobile', ]
 
     # Model Managers
     objects = UserManager()

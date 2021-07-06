@@ -10,9 +10,6 @@ class Symptom(models.Model):
 
     # required
     symptom_name = models.CharField(max_length=255, blank=True)
-    desease_name = models.ForeignKey(
-        "desease.Desease", on_delete=models.SET_NULL, null=True, blank=True
-    )
 
     def __str__(self):
         return self.symptom_name
