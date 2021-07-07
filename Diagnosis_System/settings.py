@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'user.apps.UserConfig',
     'case.apps.CaseConfig',
     'desease.apps.DeseaseConfig',
     'symptoms.apps.SymptomsConfig',
