@@ -4,6 +4,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 # =========================================== User ModelManager
+# from xshop
 class UserManager(BaseUserManager):
     """
     User model manager where mobile is the unique identifiers
