@@ -140,5 +140,5 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    '/home/rivia/Desktop/Database_Project/project_web/Templates',
+    "/home/rivia/Desktop/Database_Project/project_web/Templates",
 ]

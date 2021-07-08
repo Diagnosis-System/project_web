@@ -6,7 +6,7 @@ app_name = 'symptoms'
 urlpatterns = [
     
     #symptoms view
-    path('',views.Symname,name ="Symname")
-    
+    path('',views.Symname,name ="Symname"),
+    path('casesymptomsadd',views.CaseSymptomsadd , name = "CaseSymptomsadd")
 ]
 

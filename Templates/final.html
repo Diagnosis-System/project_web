@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'StyleSheet2.css' %}" type='text/css'/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{% block title %}Diagnosis System{% endblock %}</title>
+</head>
+<body>
+	{% block content %}
+			
+		
+		<div id="wrapper">
+
+				<h3 for="yes_no_radio">Add symptom</h3>
+				{% for symptom in symptoms %}
+					<div id = "symptomsadddiv">
+
+						<label id = "caseSymptomadd">
+							{{symptom}}
+						</label>
+						
+						<button id="myButton_caseSymptoms" class="" >AddSymptom</button>
+						<br>
+					</div>
+				{% endfor %}
+			
+			<h2 for="yes_no_radio">Case Symptoms</h2>
+			<p>	
+				
+				</p>
+			<button id="myButton" class="float-left submit-button" >Add CaseSymptoms</button>
+
+		</div>
+		
+
+	
+
+	{% endblock %}
+</body>

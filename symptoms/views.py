@@ -33,3 +33,10 @@ def Symname(request):
                 #    'symptoms':symptoms ,
                    'new_symptom': new_symptom ,
                    'symptom_form' : symptom_form})
+    
+def CaseSymptomsadd(request) :
+    symptoms = Symptom.objects.all()
+    return render(request,
+                  'final.html',
+                  {'symptoms': symptoms}
+                  )

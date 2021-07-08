@@ -18,6 +18,8 @@ input[type=text] {
 }
 
 #wrapper {
+	/* text-align: left; */
+
     font-size: 20px;
     padding-right: 250px;
     font-weight:700;
@@ -56,12 +58,25 @@ p {
 
 #myButton {
 	margin-bottom:10%;
-	margin-left: 73%;
+	margin-left: 10%;
 	background-color: rgb(6, 119, 177);
 	color: white;
-	width: 80px;
-	height: 40px;
+	width: auto;
+	height: auto;
 	border-radius:6px;
+	font-size: 20px;
+}
+#myButton_caseSymptoms {
+	/* margin-bottom:10%;
+	margin-left: 73%; */
+	background-color: rgb(6, 119, 177);
+	color: white;
+	width: auto;
+	height: auto;
+	border-radius:6px;
+	font-size: 15px;
+	float: right;
+
 }
 
 	/* #myButton:hover {
@@ -75,3 +90,14 @@ p {
 		background-color: red;
 		opacity: 1;
 	} */
+#symptomsadddiv{
+	margin: 5px;
+	background-color:rgba(255, 255, 255, 0.1);	
+	
+}
+
+h3 {
+	padding-left: 0px;
+	border: 0px;
+	margin: 0px;
+}
